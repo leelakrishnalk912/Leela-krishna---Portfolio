@@ -1,0 +1,2059 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEELA KRISHNA.D – Aspiring AI Engineer & CSE Student</title>
+    <meta
+      name="description"
+      content="Personal portfolio of Leela Krishna.D, a first-semester B.Tech CSE (AI/ML) student building foundational projects in Python, Web Development, and Generative AI."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LEELA KRISHNA.D – Aspiring AI Engineer & CSE Student" />
+    <meta
+      property="og:description"
+      content="Portfolio of Leela Krishna.D, a first-semester B.Tech CSE (AI/ML) student building foundational projects in Python, Web Development, and Generative AI."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "LEELA KRISHNA.D",
+        "jobTitle": "Aspiring AI Engineer",
+        "description": "First-semester B.Tech CSE (AI/ML) student learning Python, Web Development, and Generative AI.",
+        "sameAs": [
+          "https://github.com/leelakrishnalk912",
+          "https://www.linkedin.com/in/leela-krishna-68269643b/"
+        ]
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background-color: #fafbfc;
+        color: #0f172a;
+      }
+      .bg-colorful-mesh {
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.06) 0px, transparent 50%),
+          radial-gradient(at 50% 50%, rgba(59, 130, 246, 0.06) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.06) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+      }
+      :focus-visible {
+        outline: 2px solid #4f46e5;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body class="selection:bg-indigo-100 selection:text-indigo-900 antialiased overflow-x-hidden">
+
+    <!-- ========================================== -->
+    <!-- TOP NAVIGATION BAR                         -->
+    <!-- ========================================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-indigo-100/60 py-3.5">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-8">
+          <!-- Zone 1: Logo Wordmark -->
+          <a href="#home" class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 flex items-center gap-1.5 group">
+            <span>LEELA</span>
+            <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">KRISHNA</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 group-hover:scale-125 transition-transform"></span>
+          </a>
+
+          <!-- Zone 2: Navigation Links -->
+          <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600" aria-label="Main Navigation">
+            <a href="#home" class="nav-link text-indigo-600 font-semibold hover:text-indigo-600 transition-colors py-1 relative">Home</a>
+            <a href="#about" class="nav-link hover:text-slate-900 transition-colors py-1 relative">About</a>
+            <a href="#skills" class="nav-link hover:text-slate-900 transition-colors py-1 relative">Skills</a>
+            <a href="#projects" class="nav-link hover:text-slate-900 transition-colors py-1 relative">Projects</a>
+            <a href="#experience" class="nav-link hover:text-slate-900 transition-colors py-1 relative">Experience</a>
+            <a href="#contact" class="nav-link hover:text-slate-900 transition-colors py-1 relative">Contact</a>
+          </nav>
+
+          <!-- Zone 3: Actions -->
+          <div class="hidden md:flex items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onclick="openCommandPalette()"
+              class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-slate-500 hover:text-indigo-600 hover:bg-indigo-50/70 rounded-lg border border-slate-200 hover:border-indigo-200 transition-colors"
+              title="Quick Search & Jump (Cmd+K)"
+            >
+              <i data-lucide="search" class="w-3.5 h-3.5"></i>
+              <kbd class="font-mono text-[10px] text-indigo-500 bg-indigo-50/60 px-1 py-0.2 rounded border border-indigo-100">⌘K</kbd>
+            </button>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 rounded-lg hover:from-blue-700 hover:via-indigo-700 hover:to-violet-700 transition-all shadow-sm hover:shadow-md hover:shadow-indigo-500/20 active:scale-98"
+            >
+              <span>Connect With Me</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger -->
+          <div class="flex md:hidden items-center gap-2">
+            <button type="button" onclick="openCommandPalette()" class="p-2 text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg" aria-label="Search">
+              <i data-lucide="search" class="w-4 h-4"></i>
+            </button>
+            <button
+              type="button"
+              onclick="toggleMobileMenu()"
+              class="p-2 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg focus-visible:outline-none"
+              aria-label="Toggle navigation menu"
+            >
+              <i id="menuIcon" data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-indigo-100 px-4 pt-3 pb-6 shadow-xl">
+        <nav class="flex flex-col space-y-1.5">
+          <a href="#home" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg text-sm font-semibold bg-indigo-50 text-indigo-700">Home</a>
+          <a href="#about" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">About</a>
+          <a href="#skills" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Skills</a>
+          <a href="#projects" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Projects</a>
+          <a href="#experience" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Experience</a>
+          <a href="#contact" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Contact</a>
+          <div class="pt-3 mt-1 border-t border-slate-100">
+            <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 rounded-lg text-center shadow-sm">
+              <span>Connect With Me</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========================================== -->
+      <!-- HERO SECTION                               -->
+      <!-- ========================================== -->
+      <section id="home" class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-colorful-mesh">
+        <!-- Ambient Glowing Background Orbs -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+        <div class="absolute top-1/3 -right-20 w-96 h-96 bg-purple-400/15 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            <!-- Left Column: Typography & Bio -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-extrabold">First-Semester Student</span>
+                <span aria-hidden="true" class="text-slate-300">/</span>
+                <span class="text-slate-700">B.Tech CSE (AI/ML)</span>
+                <span aria-hidden="true" class="text-slate-300">/</span>
+                <span class="text-indigo-600 font-mono font-medium">Class of 2029</span>
+              </div>
+
+              <div class="space-y-3">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+                  Hi, I'm <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">LEELA KRISHNA</span>.
+                </h1>
+                <p class="text-lg sm:text-xl font-semibold text-slate-700 leading-snug">
+                  An aspiring AI Engineer building my foundation in <span class="text-blue-600">Python</span>, <span class="text-teal-600">Web Development</span> & <span class="text-violet-600">Generative AI</span>.
+                </p>
+              </div>
+
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+                I'm a first-semester B.Tech CSE student exploring AI, software development, and practical problem solving through projects, hackathons, and continuous learning.
+              </p>
+
+              <!-- CTAs and Social Profiles -->
+              <div class="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+                <a
+                  href="#projects"
+                  class="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-700 hover:via-indigo-700 hover:to-violet-700 rounded-xl transition-all shadow-md shadow-indigo-500/20 active:scale-98"
+                >
+                  <span>View My Projects</span>
+                  <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 hover:border-indigo-300 rounded-xl transition-all shadow-xs active:scale-98"
+                >
+                  <span>Connect With Me</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-indigo-500"></i>
+                </a>
+
+                <!-- Real Social Links -->
+                <div class="flex items-center gap-2 ml-1">
+                  <a
+                    href="https://github.com/leelakrishnalk912"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="p-2.5 text-slate-600 hover:text-slate-900 hover:bg-white rounded-xl border border-slate-200 hover:border-slate-300 transition-all shadow-2xs"
+                    title="GitHub Profile"
+                    aria-label="GitHub Profile"
+                  >
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/leela-krishna-68269643b/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="p-2.5 text-slate-600 hover:text-blue-600 hover:bg-white rounded-xl border border-slate-200 hover:border-blue-200 transition-all shadow-2xs"
+                    title="LinkedIn Profile"
+                    aria-label="LinkedIn Profile"
+                  >
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Student Credential Badges -->
+              <div class="pt-4 grid grid-cols-3 gap-3 max-w-lg">
+                <div class="p-3 bg-gradient-to-br from-blue-50/80 to-white rounded-xl border border-blue-100 shadow-2xs">
+                  <span class="block text-xl font-extrabold font-mono text-blue-600">4</span>
+                  <span class="block text-xs font-medium text-slate-600">Python Projects</span>
+                </div>
+                <div class="p-3 bg-gradient-to-br from-indigo-50/80 to-white rounded-xl border border-indigo-100 shadow-2xs">
+                  <span class="block text-xl font-extrabold font-mono text-indigo-600">Sem 1</span>
+                  <span class="block text-xs font-medium text-slate-600">Current Standing</span>
+                </div>
+                <div class="p-3 bg-gradient-to-br from-purple-50/80 to-white rounded-xl border border-purple-100 shadow-2xs">
+                  <span class="block text-xl font-extrabold font-mono text-purple-600">AI / ML</span>
+                  <span class="block text-xs font-medium text-slate-600">Specialization</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Live Interactive Python Runner -->
+            <div class="lg:col-span-5">
+              <div class="bg-white rounded-2xl border border-indigo-100 shadow-xl shadow-indigo-500/5 overflow-hidden ring-1 ring-slate-900/5">
+                <!-- Window Chrome Header -->
+                <div class="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-950 to-indigo-950 text-slate-300 border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                    <span id="heroTabTitle" class="ml-2 text-xs font-mono text-indigo-300 font-medium">python3_repl.py</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <button id="btnHeroTerminal" onclick="switchHeroTab('terminal')" class="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-600 text-white">Terminal</button>
+                    <button id="btnHeroDesk" onclick="switchHeroTab('desk')" class="px-2.5 py-1 text-xs font-semibold rounded-md text-slate-400 hover:text-white">Workspace</button>
+                  </div>
+                </div>
+
+                <!-- Tab 1: Live Interactive Terminal -->
+                <div id="heroTerminalView" class="p-5 space-y-4">
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="text-slate-500 font-medium">Select Python Script:</span>
+                    <div class="flex items-center gap-1">
+                      <button onclick="selectHeroScript('voter')" id="btnScriptVoter" class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-blue-100 text-blue-700 border border-blue-300">voter.py</button>
+                      <button onclick="selectHeroScript('atm')" id="btnScriptAtm" class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold text-slate-600 hover:bg-slate-100">atm.py</button>
+                      <button onclick="selectHeroScript('calc')" id="btnScriptCalc" class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold text-slate-600 hover:bg-slate-100">calc.py</button>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-mono font-semibold text-slate-500">Input:</span>
+                    <input
+                      id="heroInput"
+                      type="text"
+                      value="19"
+                      class="flex-1 px-3 py-1.5 text-xs font-mono bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-indigo-600 focus:outline-hidden"
+                    />
+                    <button
+                      onclick="runHeroScript()"
+                      class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-lg transition-all shadow-xs"
+                    >
+                      <i data-lucide="play" class="w-3 h-3 text-emerald-300"></i>
+                      <span>Run Code</span>
+                    </button>
+                  </div>
+
+                  <div id="heroConsoleOutput" class="bg-slate-950 text-emerald-400 font-mono text-xs p-4 rounded-xl border border-slate-800 min-h-[140px] max-h-[160px] overflow-y-auto leading-relaxed shadow-inner">
+>>> Initialized Python 3.12 Runtime
+>>> Script: voter_check.py
+>>> Input Age: 19
+>>> Output: Eligible: You are 19 years old and eligible to vote.
+                  </div>
+
+                  <div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+                    <span class="text-indigo-600 font-medium">Python 3.x Standard Library</span>
+                    <span class="font-mono text-slate-500">Local Execution Sandbox</span>
+                  </div>
+                </div>
+
+                <!-- Tab 2: Study Workspace Image -->
+                <div id="heroDeskView" class="hidden relative group">
+                  <img
+                    src="/src/assets/images/student_workspace_1794055752697.jpg"
+                    alt="Minimalist modern engineering student study desk with Python code and algorithm flowcharts"
+                    class="w-full h-80 object-cover"
+                    onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80'"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-5 flex flex-col justify-end text-white">
+                    <span class="text-xs font-mono text-cyan-400 font-bold mb-1">STUDY & CODE ENVIRONMENT</span>
+                    <h4 class="text-sm font-bold text-white">Curriculum Practice & Problem Solving</h4>
+                    <p class="text-xs text-slate-300 mt-1">Translating algorithm flowcharts and mathematical logic into working code.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- ABOUT ME SECTION                           -->
+      <!-- ========================================== -->
+      <section id="about" class="py-24 bg-gradient-to-b from-white via-slate-50/60 to-white border-y border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Background & Direction</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">About Me</h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              A first-semester engineering student grounded in curiosity, practical experimentation, and foundational computer science.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <!-- Narrative Prose -->
+            <div class="lg:col-span-7 space-y-5 text-slate-700 leading-relaxed">
+              <p class="text-sm sm:text-base">
+                I am currently pursuing my B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning. I am at the very beginning of my software development journey, driven by deep curiosity about how intelligent systems function.
+              </p>
+              <p class="text-sm sm:text-base">
+                Rather than just studying theory, I enjoy turning core concepts into small, working projects—starting from Python fundamentals and logic building to web interfaces and modern Generative AI tooling.
+              </p>
+              <p class="text-sm sm:text-base">
+                Participating in hackathons and ideathons has been a major catalyst for my growth, teaching me how to think through real-world problem statements, build under time constraints, collaborate in teams, and articulate technical ideas clearly.
+              </p>
+              <p class="text-sm sm:text-base">
+                My long-term aspiration is to develop into an AI Engineer capable of designing, building, and deploying practical AI-powered solutions that create tangible value in the real world.
+              </p>
+
+              <!-- Values Grid -->
+              <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-5 rounded-2xl bg-gradient-to-br from-blue-50/70 via-indigo-50/30 to-white border border-blue-100 shadow-2xs">
+                  <div class="flex items-center gap-2.5 mb-2">
+                    <div class="w-8 h-8 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
+                      <i data-lucide="code" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900">Concept to Code</h3>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Reinforcing programming principles by building functional console programs, handling errors, and validating user inputs.
+                  </p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-gradient-to-br from-purple-50/70 via-pink-50/30 to-white border border-purple-100 shadow-2xs">
+                  <div class="flex items-center gap-2.5 mb-2">
+                    <div class="w-8 h-8 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center">
+                      <i data-lucide="lightbulb" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900">Real-World Mindset</h3>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Aiming to harness AI not as abstract hype, but as reliable software tools that solve concrete real-world friction.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Currently Learning Progression -->
+            <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-7 border border-indigo-100 shadow-lg shadow-indigo-500/5 space-y-6">
+              <div>
+                <div class="flex items-center gap-2 text-slate-900 mb-1">
+                  <i data-lucide="compass" class="w-4 h-4 text-indigo-600"></i>
+                  <h3 class="text-sm font-bold tracking-tight text-slate-900">Currently Learning Pipeline</h3>
+                </div>
+                <p class="text-xs text-slate-500">Click any stage below to inspect syllabus topics and active focus:</p>
+              </div>
+
+              <!-- Interactive Buttons -->
+              <div class="space-y-2.5">
+                <button
+                  id="stageBtn0"
+                  onclick="selectLearningStage(0)"
+                  class="w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-white/20 text-white">01</span>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold">Python</h4>
+                      <p class="text-[11px] text-white/80">Programming Core</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-white">Active Focus</span>
+                </button>
+
+                <button
+                  id="stageBtn1"
+                  onclick="selectLearningStage(1)"
+                  class="w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between bg-slate-50/80 hover:bg-white border-slate-200/80 text-slate-800"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-white text-slate-700 shadow-2xs">02</span>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold">Web Development</h4>
+                      <p class="text-[11px] text-slate-500">Frontend & UI</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-slate-600">Building Basics</span>
+                </button>
+
+                <button
+                  id="stageBtn2"
+                  onclick="selectLearningStage(2)"
+                  class="w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between bg-slate-50/80 hover:bg-white border-slate-200/80 text-slate-800"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-white text-slate-700 shadow-2xs">03</span>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold">Generative AI</h4>
+                      <p class="text-[11px] text-slate-500">LLMs & Prompting</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-slate-600">Hands-on</span>
+                </button>
+
+                <button
+                  id="stageBtn3"
+                  onclick="selectLearningStage(3)"
+                  class="w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between bg-slate-50/80 hover:bg-white border-slate-200/80 text-slate-800"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-white text-slate-700 shadow-2xs">04</span>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold">AI/ML Fundamentals</h4>
+                      <p class="text-[11px] text-slate-500">Math & Models</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-slate-600">Curriculum</span>
+                </button>
+              </div>
+
+              <!-- Stage Detail Card -->
+              <div id="stageDetailCard" class="p-4 rounded-xl bg-slate-50/80 border border-slate-200 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span id="stageTitle" class="text-xs font-bold text-slate-900 font-mono">Python Curriculum:</span>
+                  <span id="stageBadge" class="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-blue-100 text-blue-700">Stage 01</span>
+                </div>
+                <div id="stageTopics" class="grid grid-cols-2 gap-2 text-xs text-slate-700">
+                  <div class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i><span>Variables & Types</span></div>
+                  <div class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i><span>Conditionals (if/else)</span></div>
+                  <div class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i><span>Loops (while/for)</span></div>
+                  <div class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i><span>Functions & Scope</span></div>
+                </div>
+                <div class="pt-2 border-t border-slate-200 text-[11px] text-slate-500">
+                  <span class="font-semibold text-slate-700">Target Outcome: </span>
+                  <span id="stageGoal">Write robust console applications with user input validation.</span>
+                </div>
+              </div>
+
+              <!-- Degree Badge -->
+              <div class="pt-4 border-t border-slate-100">
+                <div class="flex items-start gap-3 text-xs text-slate-600">
+                  <div class="p-1.5 bg-blue-50 text-blue-600 rounded-lg">
+                    <i data-lucide="book-open" class="w-4 h-4 shrink-0"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900">B.Tech in Computer Science & Engineering</p>
+                    <p class="text-slate-500">Specialization: Artificial Intelligence & Machine Learning · 1st Semester</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SKILLS SECTION                             -->
+      <!-- ========================================== -->
+      <section id="skills" class="py-24 bg-gradient-to-b from-slate-50 via-indigo-50/20 to-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-10">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Technical Competencies</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Skills & Current Capabilities</h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              Honest competency indicators reflecting my first-semester learning stage. No fabricated percentages or mastery claims—only genuine practice.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2 p-1.5 bg-white/90 backdrop-blur-xs rounded-2xl border border-slate-200 shadow-2xs max-w-fit mb-8" role="tablist">
+            <button onclick="filterSkills('All')" id="skillTabAll" class="skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-xs">
+              All <span class="ml-1 opacity-70">(10)</span>
+            </button>
+            <button onclick="filterSkills('Programming')" id="skillTabProg" class="skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+              Programming <span class="ml-1 opacity-60">(1)</span>
+            </button>
+            <button onclick="filterSkills('Web Development')" id="skillTabWeb" class="skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+              Web Development <span class="ml-1 opacity-60">(3)</span>
+            </button>
+            <button onclick="filterSkills('AI')" id="skillTabAI" class="skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+              AI <span class="ml-1 opacity-60">(2)</span>
+            </button>
+            <button onclick="filterSkills('Foundations')" id="skillTabFound" class="skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+              Foundations & Practices <span class="ml-1 opacity-60">(4)</span>
+            </button>
+          </div>
+
+          <!-- Skills Cards Grid -->
+          <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Rendered dynamically by script -->
+          </div>
+
+          <!-- Integrity commitment banner -->
+          <div class="mt-10 p-5 rounded-2xl bg-white border border-indigo-100 text-xs text-slate-600 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs">
+            <p><strong class="text-slate-900 font-bold">Commitment to Integrity:</strong> Skill levels represent actual hands-on exploration and first-semester computer science coursework. No inflated metrics.</p>
+            <a href="https://github.com/leelakrishnalk912" target="_blank" rel="noreferrer" class="text-indigo-600 hover:text-indigo-700 font-bold hover:underline whitespace-nowrap shrink-0">
+              Review GitHub Commits →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PROJECTS SECTION                           -->
+      <!-- ========================================== -->
+      <section id="projects" class="py-24 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div class="max-w-2xl">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Selected Work</span>
+              <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Featured Python Projects</h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                Beginner-level applications created to solidify programming logic, user input validation, control flow branching, and algorithm design.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-indigo-700 shrink-0 bg-indigo-50/80 px-3.5 py-2 rounded-xl border border-indigo-100 font-semibold shadow-2xs">
+              <span>Runtime: Python 3.x · 4 Built Programs</span>
+            </div>
+          </div>
+
+          <!-- 4 Project Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Project 1: Voter Eligibility Checker -->
+            <article class="group bg-white rounded-3xl border border-blue-200/90 hover:border-blue-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xs">
+              <div>
+                <div class="px-5 py-3.5 bg-gradient-to-r from-blue-950 via-indigo-950 to-slate-900 text-slate-300 border-b border-white/10 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/90"></span>
+                    <span class="ml-2 font-mono text-xs text-white/90 font-medium">voter_eligibility.py</span>
+                  </div>
+                  <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded text-blue-300 bg-blue-900/60">Python</span>
+                </div>
+                <div class="p-6 bg-white space-y-4">
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-11 h-11 rounded-2xl bg-blue-100/90 text-blue-700 flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                      <i data-lucide="vote" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Voter Eligibility Checker</h3>
+                      <div class="mt-1 text-xs text-slate-500 flex items-center gap-2 font-medium">
+                        <span>Console Application</span><span class="text-slate-300">·</span><span>Semester 1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    A beginner Python project that determines whether a person is eligible to vote based on their age.
+                  </p>
+                  <div class="pt-2">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Concepts Implemented</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-blue-50 text-blue-700 border-blue-200">Conditionals (if-else)</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-blue-50 text-blue-700 border-blue-200">Input Validation</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-blue-50 text-blue-700 border-blue-200">Type Casting (int)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 py-3.5 bg-slate-950 text-slate-300 font-mono text-xs border-y border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2 truncate">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                    <span class="truncate font-medium text-cyan-300">Eligible: You are 19 years old and eligible to vote.</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 uppercase tracking-wider shrink-0 ml-2">Output</span>
+                </div>
+              </div>
+              <div class="p-5 bg-slate-50/60 flex items-center justify-between gap-4 mt-auto border-t border-slate-100">
+                <span class="text-xs text-slate-500 font-medium">Live Simulator Ready</span>
+                <button
+                  type="button"
+                  onclick="openProjectModal('voter')"
+                  class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-slate-900 to-indigo-950 hover:from-blue-600 hover:to-indigo-600 rounded-xl transition-all shadow-xs"
+                >
+                  <i data-lucide="eye" class="w-3.5 h-3.5 text-indigo-300"></i>
+                  <span>View Project & Code</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Project 2: Calculator -->
+            <article class="group bg-white rounded-3xl border border-indigo-200/90 hover:border-indigo-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xs">
+              <div>
+                <div class="px-5 py-3.5 bg-gradient-to-r from-indigo-950 via-purple-950 to-slate-900 text-slate-300 border-b border-white/10 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/90"></span>
+                    <span class="ml-2 font-mono text-xs text-white/90 font-medium">calculator.py</span>
+                  </div>
+                  <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded text-indigo-300 bg-indigo-900/60">Python</span>
+                </div>
+                <div class="p-6 bg-white space-y-4">
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-11 h-11 rounded-2xl bg-indigo-100/90 text-indigo-700 flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                      <i data-lucide="calculator" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Calculator</h3>
+                      <div class="mt-1 text-xs text-slate-500 flex items-center gap-2 font-medium">
+                        <span>Console Application</span><span class="text-slate-300">·</span><span>Semester 1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    A simple calculator project demonstrating fundamental programming concepts and user input handling.
+                  </p>
+                  <div class="pt-2">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Concepts Implemented</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-indigo-50 text-indigo-700 border-indigo-200">Arithmetic Operators</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-indigo-50 text-indigo-700 border-indigo-200">Functions</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-indigo-50 text-indigo-700 border-indigo-200">ZeroDivision Handling</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 py-3.5 bg-slate-950 text-slate-300 font-mono text-xs border-y border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2 truncate">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                    <span class="truncate font-medium text-indigo-300">Result: 15 * 4 = 60.0</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 uppercase tracking-wider shrink-0 ml-2">Output</span>
+                </div>
+              </div>
+              <div class="p-5 bg-slate-50/60 flex items-center justify-between gap-4 mt-auto border-t border-slate-100">
+                <span class="text-xs text-slate-500 font-medium">Live Simulator Ready</span>
+                <button
+                  type="button"
+                  onclick="openProjectModal('calc')"
+                  class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-slate-900 to-indigo-950 hover:from-blue-600 hover:to-indigo-600 rounded-xl transition-all shadow-xs"
+                >
+                  <i data-lucide="eye" class="w-3.5 h-3.5 text-indigo-300"></i>
+                  <span>View Project & Code</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Project 3: ATM Management System -->
+            <article class="group bg-white rounded-3xl border border-emerald-200/90 hover:border-emerald-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xs">
+              <div>
+                <div class="px-5 py-3.5 bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-slate-300 border-b border-white/10 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/90"></span>
+                    <span class="ml-2 font-mono text-xs text-white/90 font-medium">atm_system.py</span>
+                  </div>
+                  <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded text-emerald-300 bg-emerald-900/60">Python</span>
+                </div>
+                <div class="p-6 bg-white space-y-4">
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-11 h-11 rounded-2xl bg-emerald-100/90 text-emerald-700 flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                      <i data-lucide="landmark" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">ATM Management System</h3>
+                      <div class="mt-1 text-xs text-slate-500 flex items-center gap-2 font-medium">
+                        <span>Console Application</span><span class="text-slate-300">·</span><span>Semester 1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    A beginner-level ATM simulation project demonstrating concepts such as user input, balance management, transactions, and conditional logic.
+                  </p>
+                  <div class="pt-2">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Concepts Implemented</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-emerald-50 text-emerald-700 border-emerald-200">State Tracking</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-emerald-50 text-emerald-700 border-emerald-200">While Loop Menu</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-emerald-50 text-emerald-700 border-emerald-200">Balance Validation</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 py-3.5 bg-slate-950 text-slate-300 font-mono text-xs border-y border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2 truncate">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                    <span class="truncate font-medium text-emerald-300">Current Balance: $1,150.00</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 uppercase tracking-wider shrink-0 ml-2">Output</span>
+                </div>
+              </div>
+              <div class="p-5 bg-slate-50/60 flex items-center justify-between gap-4 mt-auto border-t border-slate-100">
+                <span class="text-xs text-slate-500 font-medium">Live Simulator Ready</span>
+                <button
+                  type="button"
+                  onclick="openProjectModal('atm')"
+                  class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-slate-900 to-indigo-950 hover:from-blue-600 hover:to-indigo-600 rounded-xl transition-all shadow-xs"
+                >
+                  <i data-lucide="eye" class="w-3.5 h-3.5 text-indigo-300"></i>
+                  <span>View Project & Code</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Project 4: Student Grade Calculator -->
+            <article class="group bg-white rounded-3xl border border-amber-200/90 hover:border-amber-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xs">
+              <div>
+                <div class="px-5 py-3.5 bg-gradient-to-r from-amber-950 via-rose-950 to-slate-900 text-slate-300 border-b border-white/10 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/90"></span>
+                    <span class="ml-2 font-mono text-xs text-white/90 font-medium">grade_calculator.py</span>
+                  </div>
+                  <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded text-amber-300 bg-amber-900/60">Python</span>
+                </div>
+                <div class="p-6 bg-white space-y-4">
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-11 h-11 rounded-2xl bg-amber-100/90 text-amber-700 flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                      <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Student Grade Calculator</h3>
+                      <div class="mt-1 text-xs text-slate-500 flex items-center gap-2 font-medium">
+                        <span>Console Application</span><span class="text-slate-300">·</span><span>Semester 1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    A Python project that calculates student grades based on marks and demonstrates conditional statements and basic data processing.
+                  </p>
+                  <div class="pt-2">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Concepts Implemented</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-amber-50 text-amber-800 border-amber-200">Score Averaging</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-amber-50 text-amber-800 border-amber-200">if-elif-else Ladder</span>
+                      <span class="px-2.5 py-0.5 text-xs font-medium rounded-lg border bg-amber-50 text-amber-800 border-amber-200">Data Aggregation</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-5 py-3.5 bg-slate-950 text-slate-300 font-mono text-xs border-y border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2 truncate">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                    <span class="truncate font-medium text-amber-300">Average: 85.00% · Grade: B (Very Good)</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 uppercase tracking-wider shrink-0 ml-2">Output</span>
+                </div>
+              </div>
+              <div class="p-5 bg-slate-50/60 flex items-center justify-between gap-4 mt-auto border-t border-slate-100">
+                <span class="text-xs text-slate-500 font-medium">Live Simulator Ready</span>
+                <button
+                  type="button"
+                  onclick="openProjectModal('grade')"
+                  class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-slate-900 to-indigo-950 hover:from-blue-600 hover:to-indigo-600 rounded-xl transition-all shadow-xs"
+                >
+                  <i data-lucide="eye" class="w-3.5 h-3.5 text-indigo-300"></i>
+                  <span>View Project & Code</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-white/60"></i>
+                </button>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Bottom banner -->
+          <div class="mt-12 p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-indigo-50/60 via-purple-50/30 to-white border border-indigo-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+            <div class="space-y-1">
+              <h4 class="text-sm font-bold text-slate-900">Verified Student Code</h4>
+              <p class="text-xs text-slate-600 max-w-xl">
+                All projects represent beginner console applications developed during first-semester coursework. Full code walkthroughs and interactive testers are built directly into the "View Project" modals.
+              </p>
+            </div>
+            <a
+              href="https://github.com/leelakrishnalk912"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-xl transition-all shadow-md shadow-indigo-500/20 whitespace-nowrap shrink-0"
+            >
+              <span>Visit My GitHub</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- HACKATHONS & IDEATHONS SECTION             -->
+      <!-- ========================================== -->
+      <section id="experience" class="py-24 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Hackathons & Ideathons</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Learning Through Building</h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              As a first-semester student, hackathons and ideathons are my primary testing ground for practical problem solving, team collaboration, and rapid prototyping.
+            </p>
+          </div>
+
+          <!-- 5 Pillars -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-gradient-to-br from-blue-50/70 via-indigo-50/20 to-white rounded-3xl p-6 border border-blue-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-11 h-11 rounded-2xl bg-white border border-slate-200/60 flex items-center justify-center shadow-2xs text-blue-600">
+                    <i data-lucide="target" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-mono text-xs font-bold text-blue-500">01</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">Thinking About Real-World Problems</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Moving beyond textbook theory to analyze actual user friction, societal challenges, and areas where practical software can make a measurable difference.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-200/60">
+                <span class="text-[11px] font-bold text-slate-400 block uppercase tracking-wide">Core Competency</span>
+                <span class="text-xs font-bold text-slate-800 mt-0.5 block">Problem scoping & root-cause analysis</span>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-indigo-50/70 via-purple-50/20 to-white rounded-3xl p-6 border border-indigo-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-11 h-11 rounded-2xl bg-white border border-slate-200/60 flex items-center justify-center shadow-2xs text-indigo-600">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-mono text-xs font-bold text-indigo-500">02</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">Developing Ideas Under Time Constraints</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Learning to prioritize essential features, manage time in 24–36 hour hackathon sprints, and ship a functional prototype within a tight deadline.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-200/60">
+                <span class="text-[11px] font-bold text-slate-400 block uppercase tracking-wide">Core Competency</span>
+                <span class="text-xs font-bold text-slate-800 mt-0.5 block">Rapid execution & scoping restraint</span>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-50/70 via-teal-50/20 to-white rounded-3xl p-6 border border-emerald-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-11 h-11 rounded-2xl bg-white border border-slate-200/60 flex items-center justify-center shadow-2xs text-emerald-600">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-mono text-xs font-bold text-emerald-500">03</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">Collaborating in Teams</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Working closely with fellow student developers and ideators, dividing tasks, communicating logic, and coordinating on git and project milestones.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-200/60">
+                <span class="text-[11px] font-bold text-slate-400 block uppercase tracking-wide">Core Competency</span>
+                <span class="text-xs font-bold text-slate-800 mt-0.5 block">Active communication & team synergy</span>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-amber-50/70 via-orange-50/20 to-white rounded-3xl p-6 border border-amber-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-11 h-11 rounded-2xl bg-white border border-slate-200/60 flex items-center justify-center shadow-2xs text-amber-600">
+                    <i data-lucide="presentation" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-mono text-xs font-bold text-amber-500">04</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">Presenting Solutions</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Structuring technical presentations and ideathon pitches to clearly explain the problem, the technical architecture, and the future potential.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-200/60">
+                <span class="text-[11px] font-bold text-slate-400 block uppercase tracking-wide">Core Competency</span>
+                <span class="text-xs font-bold text-slate-800 mt-0.5 block">Clear technical pitching & storytelling</span>
+              </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-1 bg-gradient-to-br from-purple-50/70 via-pink-50/20 to-white rounded-3xl p-6 border border-purple-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <div class="w-11 h-11 rounded-2xl bg-white border border-slate-200/60 flex items-center justify-center shadow-2xs text-purple-600">
+                    <i data-lucide="hammer" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-mono text-xs font-bold text-purple-500">05</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">Learning by Building</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Gaining practical hands-on experience by immediately writing code, troubleshooting runtime errors, and iterating on solutions in a live environment.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-200/60">
+                <span class="text-[11px] font-bold text-slate-400 block uppercase tracking-wide">Core Competency</span>
+                <span class="text-xs font-bold text-slate-800 mt-0.5 block">Rapid trial-and-error & debugging</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Statement Banner -->
+          <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-950 via-indigo-950 to-slate-950 text-white shadow-xl shadow-indigo-950/20 border border-indigo-900/50">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div class="space-y-2 max-w-xl">
+                <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">Hands-on Engineering Philosophy</span>
+                <h3 class="text-lg sm:text-xl font-bold text-white">Why Ideathons & Hackathons Accelerate Growth</h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  In competitive sprints, software isn't just theory—it is a live tool to resolve concrete friction. Working under constraints teaches real engineering discipline: scoping MVP features, collaborating with peers, and clearly explaining the technical architecture.
+                </p>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 space-y-3 text-xs text-slate-200 shrink-0 w-full lg:w-72 shadow-inner">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-6 h-6 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-3.5 h-3.5"></i></div>
+                  <span class="font-medium">Rapid Prototyping Under 36h</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-6 h-6 rounded-lg bg-blue-400/20 text-blue-300 flex items-center justify-center shrink-0"><i data-lucide="git-commit" class="w-3.5 h-3.5"></i></div>
+                  <span class="font-medium">Iterative Logic & Git Versioning</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-6 h-6 rounded-lg bg-emerald-400/20 text-emerald-300 flex items-center justify-center shrink-0"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i></div>
+                  <span class="font-medium">Zero Fake Accolades, 100% Practice</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- LEARNING JOURNEY ROADMAP                   -->
+      <!-- ========================================== -->
+      <section class="py-24 bg-gradient-to-b from-slate-50 via-purple-50/20 to-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">Evolution & Vision</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">My Learning Journey</h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              A roadmap showing my learning direction from computer science fundamentals to AI Engineering. This illustrates my learning path rather than claimed mastery.
+            </p>
+          </div>
+
+          <!-- Step Progression Rail -->
+          <div class="mb-10 p-2 bg-white rounded-3xl border border-indigo-100 shadow-md shadow-indigo-500/5 overflow-x-auto">
+            <div id="roadmapStepRail" class="flex items-center justify-between min-w-[620px] gap-2 p-1">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Spotlight Banner -->
+          <div id="roadmapSpotlight" class="bg-white rounded-3xl p-6 sm:p-8 border border-indigo-100 shadow-lg shadow-indigo-500/5 mb-12 ring-1 ring-indigo-500/10">
+            <!-- Rendered via JS -->
+          </div>
+
+          <!-- Flowchart Stack -->
+          <div id="roadmapStack" class="max-w-xl mx-auto space-y-2">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- CONTACT SECTION                            -->
+      <!-- ========================================== -->
+      <section id="contact" class="py-24 bg-gradient-to-b from-white via-indigo-50/20 to-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600">Get In Touch</span>
+            <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Let's Connect</h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              I'm always open to connecting with fellow students, developers, builders, and people interested in AI and technology.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Left Column: Verified Channels -->
+            <div class="lg:col-span-5 space-y-4">
+              <a
+                href="https://www.linkedin.com/in/leela-krishna-68269643b/"
+                target="_blank"
+                rel="noreferrer"
+                class="p-5 bg-gradient-to-br from-blue-50/80 via-white to-white rounded-2xl border border-blue-200/80 hover:border-blue-400 hover:shadow-md hover:shadow-blue-500/10 transition-all flex items-center justify-between group"
+              >
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-xs">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">LinkedIn</h3>
+                    <p class="text-xs text-slate-500">Connect & Network professionally</p>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-blue-400 group-hover:text-blue-600 transition-colors"></i>
+              </a>
+
+              <a
+                href="https://github.com/leelakrishnalk912"
+                target="_blank"
+                rel="noreferrer"
+                class="p-5 bg-gradient-to-br from-slate-50 via-white to-white rounded-2xl border border-slate-200 hover:border-slate-400 hover:shadow-md hover:shadow-slate-500/10 transition-all flex items-center justify-between group"
+              >
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-xs">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-slate-900 group-hover:text-slate-700 transition-colors">GitHub</h3>
+                    <p class="text-xs text-slate-500">View code repositories & commits</p>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-slate-900 transition-colors"></i>
+              </a>
+
+              <div class="p-5 bg-gradient-to-br from-indigo-50/80 via-purple-50/30 to-white rounded-2xl border border-indigo-200/80 shadow-xs flex items-center justify-between">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white flex items-center justify-center shadow-xs">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-slate-900">Direct Email</h3>
+                    <p class="text-xs font-mono text-indigo-700 font-semibold truncate max-w-[170px] sm:max-w-xs">leelakrishnalk912@gmail.com</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onclick="copyEmail()"
+                  id="btnCopyEmail"
+                  class="p-2.5 text-indigo-600 hover:text-indigo-800 hover:bg-indigo-100 rounded-xl border border-indigo-200 transition-colors"
+                  title="Copy email address"
+                  aria-label="Copy email address"
+                >
+                  <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column: Quick Note Form -->
+            <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-indigo-100 shadow-xl shadow-indigo-500/5">
+              <div class="flex items-center gap-2 mb-1">
+                <i data-lucide="message-square" class="w-4 h-4 text-indigo-600"></i>
+                <h3 class="text-base font-bold text-slate-900">Send a Quick Message</h3>
+              </div>
+              <p class="text-xs text-slate-500 mb-6">
+                Draft a direct note to collaborate on projects, discuss hackathons, or share learning resources.
+              </p>
+
+              <form onsubmit="handleSendNote(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-bold text-slate-700 mb-1">Your Name</label>
+                    <input
+                      id="contact-name"
+                      type="text"
+                      required
+                      placeholder="e.g. Alex"
+                      class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:outline-hidden transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label for="contact-subject" class="block text-xs font-bold text-slate-700 mb-1">Subject / Topic</label>
+                    <input
+                      id="contact-subject"
+                      type="text"
+                      required
+                      placeholder="e.g. Hackathon collaboration / Python project"
+                      class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:outline-hidden transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-bold text-slate-700 mb-1">Message</label>
+                  <textarea
+                    id="contact-message"
+                    required
+                    rows="4"
+                    placeholder="Hi Leela Krishna, I saw your portfolio and would like to connect..."
+                    class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:outline-hidden transition-colors resize-none"
+                  ></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2">
+                  <span class="text-[11px] text-slate-400">Opens your default email client with your drafted message.</span>
+                  <button
+                    type="submit"
+                    class="inline-flex items-center gap-2 px-6 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-700 hover:via-indigo-700 hover:to-violet-700 rounded-xl transition-all shadow-md shadow-indigo-500/20 active:scale-98"
+                  >
+                    <span>Send Message</span>
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="bg-white py-12 text-slate-600 border-t border-indigo-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-center md:text-left space-y-1">
+            <p class="text-sm font-bold text-slate-900 flex items-center justify-center md:justify-start gap-1">
+              <span>© 2026</span>
+              <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent font-extrabold">LEELA KRISHNA.</span>
+            </p>
+            <p class="text-xs text-slate-500">Built with curiosity and a passion for learning.</p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a href="https://github.com/leelakrishnalk912" target="_blank" rel="noreferrer" class="p-2.5 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors" title="GitHub">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/leela-krishna-68269643b/" target="_blank" rel="noreferrer" class="p-2.5 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors" title="LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <div class="h-4 w-px bg-slate-200 mx-1"></div>
+            <button
+              type="button"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/70 rounded-xl transition-colors"
+            >
+              <span>Back to Top</span>
+              <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE PROJECT MODAL                  -->
+    <!-- ========================================== -->
+    <div id="projectModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onclick="closeProjectModal()">
+      <div class="bg-white rounded-3xl max-w-3xl w-full border border-indigo-100 shadow-2xl overflow-hidden my-8 ring-1 ring-slate-900/10" onclick="event.stopPropagation()">
+        
+        <!-- Modal Chrome Header -->
+        <div class="flex items-start justify-between p-6 border-b border-white/10 bg-gradient-to-r from-slate-950 via-indigo-950 to-slate-900 text-white">
+          <div>
+            <div class="flex items-center gap-2 text-xs text-indigo-300 font-mono mb-1.5">
+              <span class="text-cyan-400 font-bold">Python 3.x</span>
+              <span>·</span>
+              <span>Console Application</span>
+              <span>·</span>
+              <span>Semester 1</span>
+            </div>
+            <h2 id="modalTitle" class="text-xl sm:text-2xl font-extrabold text-white">Project Title</h2>
+          </div>
+          <button type="button" onclick="closeProjectModal()" class="p-1.5 text-slate-400 hover:text-white hover:bg-white/10 rounded-xl transition-colors" aria-label="Close modal">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Modal Tabs -->
+        <div class="px-6 py-2.5 bg-slate-50 border-b border-slate-200 flex items-center gap-2">
+          <button id="modalTabSim" onclick="switchModalTab('simulator')" class="px-3.5 py-1.5 text-xs font-bold rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xs">
+            Interactive Simulator
+          </button>
+          <button id="modalTabCode" onclick="switchModalTab('code')" class="px-3.5 py-1.5 text-xs font-bold rounded-xl text-slate-600 hover:text-slate-900">
+            Python Source Code
+          </button>
+          <button id="modalTabLogic" onclick="switchModalTab('logic')" class="px-3.5 py-1.5 text-xs font-bold rounded-xl text-slate-600 hover:text-slate-900">
+            Problem & Logic
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="p-6 space-y-6 max-h-[70vh] overflow-y-auto">
+          <!-- View 1: Simulator -->
+          <div id="modalViewSimulator" class="space-y-5">
+            <!-- Injected by JS -->
+          </div>
+
+          <!-- View 2: Code -->
+          <div id="modalViewCode" class="hidden space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-indigo-600 font-semibold">Executable Python Script</span>
+              <button
+                type="button"
+                onclick="copyModalCode()"
+                id="btnCopyCode"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-indigo-700 hover:text-indigo-900 bg-indigo-50 hover:bg-indigo-100 rounded-xl border border-indigo-200 transition-colors"
+              >
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="btnCopyCodeText">Copy Full Code</span>
+              </button>
+            </div>
+            <pre class="p-5 rounded-2xl bg-slate-950 text-slate-100 font-mono text-xs leading-relaxed overflow-x-auto max-h-80 border border-slate-800 shadow-inner"><code id="modalCodeSnippet"></code></pre>
+          </div>
+
+          <!-- View 3: Logic -->
+          <div id="modalViewLogic" class="hidden space-y-5">
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Problem Statement</h3>
+              <p id="modalProblemStatement" class="text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-2xl border border-slate-200"></p>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Key Algorithmic Concepts Demonstrated</h3>
+              <div id="modalConceptsList" class="flex flex-wrap gap-2"></div>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Algorithm & Control Flow Rationale</h3>
+              <p id="modalLogicExplanation" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 px-6 border-t border-slate-200 bg-slate-50 text-xs text-slate-500">
+          <p>Developed during 1st Semester Python Programming Coursework.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://github.com/leelakrishnalk912" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 font-bold text-indigo-600 hover:text-indigo-800 hover:underline">
+              <span>GitHub Profile</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+            <button type="button" onclick="closeProjectModal()" class="px-3.5 py-1.5 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-xl hover:bg-slate-100 transition-colors">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- COMMAND PALETTE (CMD+K)                    -->
+    <!-- ========================================== -->
+    <div id="commandPalette" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/50 backdrop-blur-xs flex items-start justify-center pt-20 sm:pt-28 px-4" onclick="closeCommandPalette()">
+      <div class="bg-white rounded-2xl max-w-lg w-full border border-slate-200 shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+        <div class="flex items-center gap-3 px-4 py-3.5 border-b border-slate-200">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 shrink-0"></i>
+          <input
+            id="commandSearchInput"
+            type="text"
+            oninput="filterCommandPalette(this.value)"
+            placeholder="Type to jump to section or project... (e.g. Projects, Skills, ATM)"
+            class="flex-1 text-sm bg-transparent border-none focus:outline-hidden text-slate-900 placeholder:text-slate-400"
+          />
+          <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-400 bg-slate-100 rounded border border-slate-200">ESC</kbd>
+          <button type="button" onclick="closeCommandPalette()" class="p-1 text-slate-400 hover:text-slate-700">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div id="commandList" class="max-h-72 overflow-y-auto p-2 space-y-1">
+          <!-- Injected via JS -->
+        </div>
+
+        <div class="px-4 py-2.5 bg-slate-50 border-t border-slate-100 text-[11px] text-slate-400 flex items-center justify-between">
+          <span>Tip: Press <kbd class="font-mono bg-white px-1 py-0.5 rounded border border-slate-200 text-slate-600">Cmd+K</kbd> anywhere</span>
+          <span class="font-mono">LEELA KRISHNA.D</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT LOGIC & STATE ENGINE            -->
+    <!-- ========================================== -->
+    <script>
+      // 1. Data Store
+      const SKILLS = [
+        { name: 'Python', category: 'Programming', level: 'Learning', description: 'Variables, loops, functions, conditionals, console I/O, and problem-solving logic.' },
+        { name: 'HTML', category: 'Web Development', level: 'Learning', description: 'Semantic markup, accessible page structure, and clean document layouts.' },
+        { name: 'CSS', category: 'Web Development', level: 'Learning', description: 'Responsive styling, Flexbox, box model, and modern clean aesthetics.' },
+        { name: 'JavaScript', category: 'Web Development', level: 'Learning', description: 'Core syntax, variables, DOM manipulation, functions, and event handling.' },
+        { name: 'Generative AI', category: 'AI', level: 'Learning', description: 'Prompt engineering techniques, LLM capabilities, and practical workflow integration.' },
+        { name: 'AI/ML Fundamentals', category: 'AI', level: 'Exploring', description: 'First-semester curriculum study in mathematical foundations, vectors, and ML concepts.' },
+        { name: 'Problem Solving', category: 'Foundations', level: 'Foundational', description: 'Breaking down computational tasks into step-by-step algorithms and flowcharts.' },
+        { name: 'Hackathons', category: 'Foundations', level: 'Familiar', description: 'Rapid prototyping, team synergy, sprint ideation, and problem scoping.' },
+        { name: 'Ideathons', category: 'Foundations', level: 'Familiar', description: 'Solution conceptualization, user empathy, value proposition, and technical pitching.' },
+        { name: 'Continuous Learning', category: 'Foundations', level: 'Foundational', description: 'Consistent daily practice, documentation reading, and building incremental projects.' }
+      ];
+
+      const ROADMAP = [
+        { step: 1, stage: 'B.Tech CSE (AI/ML)', status: 'current', desc: 'First-semester foundations in computer science, discrete math, and computational problem solving.', focus: ['CS Fundamentals', 'Academic Math', 'First-Semester Coursework'] },
+        { step: 2, stage: 'Programming Fundamentals', status: 'current', desc: 'Mastering core Python syntax, algorithms, data structures, and console programming logic.', focus: ['Python Basics', 'Control Flow', 'Functions', 'Modular Code'] },
+        { step: 3, stage: 'Web Development', status: 'in-progress', desc: 'Learning modern frontend technologies to build clean, responsive user interfaces for software.', focus: ['HTML5 & Semantic Structure', 'CSS & Flexbox', 'JavaScript Fundamentals'] },
+        { step: 4, stage: 'Generative AI', status: 'in-progress', desc: 'Exploring LLM APIs, prompt engineering patterns, and integrating generative capabilities into apps.', focus: ['Prompt Engineering', 'LLM Integration', 'Practical AI Tools'] },
+        { step: 5, stage: 'AI/ML Fundamentals', status: 'upcoming', desc: 'Deepening knowledge in linear algebra, probability, data preprocessing, and machine learning models.', focus: ['NumPy & Pandas', 'Linear Algebra', 'Scikit-Learn', 'Model Evaluation'] },
+        { step: 6, stage: 'AI Engineering', status: 'upcoming', desc: 'Designing end-to-end practical AI systems that connect data pipelines, models, and real-world user needs.', focus: ['End-to-end Systems', 'Model Deployment', 'Production Problem Solving'] }
+      ];
+
+      const PROJECTS = {
+        voter: {
+          title: 'Voter Eligibility Checker',
+          tech: 'Python',
+          problem: 'Determine civic voting eligibility by evaluating user-entered age against the legal age threshold (18 years), gracefully catching invalid inputs such as negative numbers or non-numeric entries.',
+          concepts: ['Conditionals (if-else)', 'Input Validation', 'Type Casting (int)', 'Console Formatting'],
+          logic: 'The program prompts the user for their age, casts the string input to an integer, and checks boundary conditions. If age >= 18, it confirms eligibility; if 0 <= age < 18, it calculates remaining years until eligible; if negative, it flags an invalid age.',
+          snippet: `# Voter Eligibility Checker
+def check_voting_eligibility():
+    print("=== Voting Eligibility System ===")
+    try:
+        age_input = input("Enter your age: ")
+        age = int(age_input)
+        
+        if age < 0:
+            print("Error: Age cannot be negative. Please enter a valid age.")
+        elif age >= 18:
+            print(f"Eligible: You are {age} years old and eligible to cast your vote.")
+        else:
+            years_left = 18 - age
+            print(f"Not Eligible: You will be eligible to vote in {years_left} year(s).")
+    except ValueError:
+        print("Invalid input! Please enter a numerical whole number for age.")
+
+if __name__ == "__main__":
+    check_voting_eligibility()`
+        },
+        calc: {
+          title: 'Calculator',
+          tech: 'Python',
+          problem: 'Perform basic arithmetic operations (addition, subtraction, multiplication, and division) based on user selections while preventing runtime crashes like ZeroDivisionError.',
+          concepts: ['Arithmetic Operators', 'Functions', 'Divide-by-Zero Handling', 'Control Flow'],
+          logic: 'Defines discrete reusable arithmetic functions. Takes two numerical inputs and an operator from the user, matches the operator with conditional statements, checks for zero division before dividing, and prints the formatted mathematical equation.',
+          snippet: `# Simple Python Arithmetic Calculator
+def add(a, b): return a + b
+def subtract(a, b): return a - b
+def multiply(a, b): return a * b
+def divide(a, b):
+    if b == 0:
+        return "Error: Division by zero is undefined."
+    return a / b
+
+def run_calculator():
+    print("=== Python Console Calculator ===")
+    try:
+        num1 = float(input("Enter first number: "))
+        op = input("Choose operation (+, -, *, /): ").strip()
+        num2 = float(input("Enter second number: "))
+        
+        if op == '+': result = add(num1, num2)
+        elif op == '-': result = subtract(num1, num2)
+        elif op == '*': result = multiply(num1, num2)
+        elif op == '/': result = divide(num1, num2)
+        else: result = "Invalid operator."
+        print(f"Result: {result}")
+    except ValueError:
+        print("Error: Invalid numerical input.")
+
+if __name__ == "__main__":
+    run_calculator()`
+        },
+        atm: {
+          title: 'ATM Management System',
+          tech: 'Python',
+          problem: 'Simulate a banking ATM terminal where users can check balance, deposit money, withdraw funds, and exit. Ensures withdrawal cannot exceed current balance and inputs must be positive.',
+          concepts: ['State Management', 'While Loop', 'Transaction Logic', 'Menu-driven Interface'],
+          logic: 'Initializes a persistent balance variable. A continuous while loop displays a numbered menu. Branching logic handles each selection: deposits increase balance, withdrawals check sufficiency before deducting, and option 4 terminates the session.',
+          snippet: `# ATM Simulation Terminal
+def atm_simulation():
+    balance = 1000.0
+    is_active = True
+    print("=== Welcome to College Student Banking ATM ===")
+    while is_active:
+        print("\\n1. Check Balance | 2. Deposit | 3. Withdraw | 4. Exit")
+        choice = input("Select an option (1-4): ").strip()
+        if choice == '1':
+            print(f"Current Balance: \${balance:.2f}")
+        elif choice == '2':
+            amount = float(input("Deposit amount: \$"))
+            if amount > 0:
+                balance += amount
+                print(f"New Balance: \${balance:.2f}")
+        elif choice == '3':
+            amount = float(input("Withdrawal amount: \$"))
+            if amount <= balance:
+                balance -= amount
+                print(f"Remaining: \${balance:.2f}")
+            else:
+                print("Insufficient funds!")
+        elif choice == '4':
+            print("Session ended. Thank you!")
+            is_active = False`
+        },
+        grade: {
+          title: 'Student Grade Calculator',
+          tech: 'Python',
+          problem: 'Take scores from multiple subjects, compute the overall percentage, and assign standard academic grades (A, B, C, D, Fail) with qualitative feedback.',
+          concepts: ['Score Averaging', 'Multi-tier Conditionals', 'Data Aggregation', 'Edge Handling'],
+          logic: 'Prompts for subject marks (0-100), computes average percentage, and evaluates an if-elif-else ladder to assign the corresponding letter grade.',
+          snippet: `# Student Grade Calculator
+def calculate_grade():
+    scores = [85, 92, 78, 88]
+    average = sum(scores) / len(scores)
+    if average >= 90: grade = "A (Outstanding)"
+    elif average >= 80: grade = "B (Very Good)"
+    elif average >= 70: grade = "C (Good)"
+    elif average >= 60: grade = "D (Pass)"
+    else: grade = "F (Needs Improvement)"
+    print(f"Average: {average:.2f}% | Grade: {grade}")`
+        }
+      };
+
+      // 2. Hero Playground State
+      let heroCurrentDemo = 'voter';
+      function selectHeroScript(demo) {
+        heroCurrentDemo = demo;
+        const bVoter = document.getElementById('btnScriptVoter');
+        const bAtm = document.getElementById('btnScriptAtm');
+        const bCalc = document.getElementById('btnScriptCalc');
+        const inp = document.getElementById('heroInput');
+        const out = document.getElementById('heroConsoleOutput');
+
+        [bVoter, bAtm, bCalc].forEach(b => {
+          b.className = 'px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold text-slate-600 hover:bg-slate-100';
+        });
+
+        if (demo === 'voter') {
+          bVoter.className = 'px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-blue-100 text-blue-700 border border-blue-300';
+          inp.value = '19';
+          out.textContent = '>>> Switched to voter_check.py\\n>>> Ready. Click "Run Code".';
+        } else if (demo === 'atm') {
+          bAtm.className = 'px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-emerald-100 text-emerald-700 border border-emerald-300';
+          inp.value = '250';
+          out.textContent = '>>> Switched to atm_system.py\\n>>> Ready. Click "Run Code".';
+        } else if (demo === 'calc') {
+          bCalc.className = 'px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-purple-100 text-purple-700 border border-purple-300';
+          inp.value = '45 + 15';
+          out.textContent = '>>> Switched to calculator.py\\n>>> Ready. Click "Run Code".';
+        }
+      }
+
+      function runHeroScript() {
+        const inp = document.getElementById('heroInput').value.trim();
+        const out = document.getElementById('heroConsoleOutput');
+
+        if (heroCurrentDemo === 'voter') {
+          const val = parseInt(inp, 10);
+          if (isNaN(val)) out.textContent = '>>> Error: Invalid numerical input for age.';
+          else if (val < 0) out.textContent = '>>> Error: Age cannot be negative.';
+          else if (val >= 18) out.textContent = `>>> [SUCCESS]\\n>>> Input Age: ${val}\\n>>> Result: Eligible to cast vote in elections!`;
+          else out.textContent = `>>> [INFO]\\n>>> Input Age: ${val}\\n>>> Result: Not eligible yet. ${18 - val} year(s) until voting eligibility.`;
+        } else if (heroCurrentDemo === 'atm') {
+          const val = parseFloat(inp);
+          if (isNaN(val) || val <= 0) out.textContent = '>>> [ATM Error]: Enter a positive transaction amount.';
+          else {
+            const rem = 1000 - val;
+            if (rem < 0) out.textContent = `>>> [ATM Declined]: Withdrawal of $${val.toFixed(2)} exceeds $1,000.00 current balance.`;
+            else out.textContent = `>>> [ATM Transaction Complete]\\n>>> Withdrew: $${val.toFixed(2)}\\n>>> Remaining Balance: $${rem.toFixed(2)}\\n>>> Status: 200 OK`;
+          }
+        } else if (heroCurrentDemo === 'calc') {
+          try {
+            const parts = inp.split('+').map(s => parseFloat(s.trim()));
+            if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+              out.textContent = `>>> [CALCULATOR]\\n>>> Expression: ${parts[0]} + ${parts[1]}\\n>>> Result: ${(parts[0] + parts[1]).toFixed(2)}`;
+            } else {
+              out.textContent = '>>> Tip: Enter two numbers separated by + (e.g. 50 + 20)';
+            }
+          } catch {
+            out.textContent = '>>> Calculation error.';
+          }
+        }
+      }
+
+      function switchHeroTab(tab) {
+        const tView = document.getElementById('heroTerminalView');
+        const dView = document.getElementById('heroDeskView');
+        const bTerm = document.getElementById('btnHeroTerminal');
+        const bDesk = document.getElementById('btnHeroDesk');
+        const title = document.getElementById('heroTabTitle');
+
+        if (tab === 'terminal') {
+          tView.classList.remove('hidden');
+          dView.classList.add('hidden');
+          bTerm.className = 'px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-600 text-white';
+          bDesk.className = 'px-2.5 py-1 text-xs font-semibold rounded-md text-slate-400 hover:text-white';
+          title.textContent = 'python3_repl.py';
+        } else {
+          tView.classList.add('hidden');
+          dView.classList.remove('hidden');
+          bDesk.className = 'px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-600 text-white';
+          bTerm.className = 'px-2.5 py-1 text-xs font-semibold rounded-md text-slate-400 hover:text-white';
+          title.textContent = 'student_desk.view';
+        }
+      }
+
+      // 3. Learning Stages Selector
+      const STAGES = [
+        {
+          name: 'Python', role: 'Programming Core', status: 'Active Focus', badge: 'Stage 01',
+          topics: ['Variables & Types', 'Conditionals (if/else)', 'Loops (while/for)', 'Functions & Scope'],
+          goal: 'Write robust console applications with user input validation.'
+        },
+        {
+          name: 'Web Development', role: 'Frontend & UI', status: 'Building Basics', badge: 'Stage 02',
+          topics: ['HTML5 Semantic Elements', 'CSS3 Layouts & Flexbox', 'JavaScript Syntax', 'DOM Manipulation'],
+          goal: 'Build clean, accessible web interfaces for software.'
+        },
+        {
+          name: 'Generative AI', role: 'LLMs & Prompting', status: 'Hands-on', badge: 'Stage 03',
+          topics: ['Prompt Engineering', 'LLM API Integration', 'Zero/Few-shot Patterns', 'Practical Workflows'],
+          goal: 'Understand modern generative workflows without relying on buzzwords.'
+        },
+        {
+          name: 'AI/ML Fundamentals', role: 'Math & Models', status: 'Curriculum', badge: 'Stage 04',
+          topics: ['Linear Algebra & Matrices', 'Probability & Stats', 'Vector Spaces', 'Introductory Models'],
+          goal: 'Master the rigorous mathematical foundation behind machine learning.'
+        }
+      ];
+
+      function selectLearningStage(idx) {
+        for (let i = 0; i < 4; i++) {
+          const btn = document.getElementById(`stageBtn${i}`);
+          if (i === idx) {
+            btn.className = 'w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md';
+            btn.querySelector('span:first-child').className = 'w-6 h-6 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-white/20 text-white';
+            btn.querySelector('p').className = 'text-[11px] text-white/80';
+            btn.querySelector('span:last-child').className = 'text-xs font-medium text-white';
+          } else {
+            btn.className = 'w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between bg-slate-50/80 hover:bg-white border-slate-200/80 text-slate-800';
+            btn.querySelector('span:first-child').className = 'w-6 h-6 rounded-lg flex items-center justify-center text-xs font-mono font-bold bg-white text-slate-700 shadow-2xs';
+            btn.querySelector('p').className = 'text-[11px] text-slate-500';
+            btn.querySelector('span:last-child').className = 'text-xs font-medium text-slate-600';
+          }
+        }
+
+        const s = STAGES[idx];
+        document.getElementById('stageTitle').textContent = `${s.name} Curriculum:`;
+        document.getElementById('stageBadge').textContent = s.badge;
+        document.getElementById('stageGoal').textContent = s.goal;
+
+        const topicCont = document.getElementById('stageTopics');
+        topicCont.innerHTML = s.topics.map(t => `
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i>
+            <span>${t}</span>
+          </div>
+        `).join('');
+        lucide.createIcons();
+      }
+
+      // 4. Skills Grid Rendering & Filtering
+      let currentSkillCategory = 'All';
+      function renderSkills() {
+        const grid = document.getElementById('skillsGrid');
+        const items = currentSkillCategory === 'All' ? SKILLS : SKILLS.filter(s => s.category === currentSkillCategory);
+
+        grid.innerHTML = items.map(skill => {
+          let icon = 'compass';
+          let iconBg = 'bg-amber-100 text-amber-700';
+          let border = 'border-slate-200 hover:border-amber-300';
+          let badge = 'text-amber-700 bg-amber-50 border-amber-200';
+
+          if (skill.category === 'Programming') {
+            icon = 'code-2';
+            iconBg = 'bg-blue-100 text-blue-700';
+            border = 'border-slate-200 hover:border-blue-300';
+            badge = 'text-blue-700 bg-blue-50 border-blue-200';
+          } else if (skill.category === 'Web Development') {
+            icon = 'globe';
+            iconBg = 'bg-emerald-100 text-emerald-700';
+            border = 'border-slate-200 hover:border-emerald-300';
+            badge = 'text-emerald-700 bg-emerald-50 border-emerald-200';
+          } else if (skill.category === 'AI') {
+            icon = 'cpu';
+            iconBg = 'bg-purple-100 text-purple-700';
+            border = 'border-slate-200 hover:border-purple-300';
+            badge = 'text-purple-700 bg-purple-50 border-purple-200';
+          }
+
+          return `
+            <div class="bg-white rounded-2xl p-6 border ${border} transition-all duration-200 shadow-2xs hover:shadow-md flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl ${iconBg} flex items-center justify-center">
+                      <i data-lucide="${icon}" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900">${skill.name}</h3>
+                  </div>
+                  <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-md border ${badge}">
+                    ${skill.level}
+                  </span>
+                </div>
+                <div class="flex items-center gap-1.5 text-xs text-slate-500 mb-3 font-medium">
+                  <span>${skill.category}</span>
+                  <span class="text-slate-300">·</span>
+                  <span>Semester 1</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${skill.description}</p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span class="font-semibold text-slate-700">Stage: ${skill.level}</span>
+                <span class="text-indigo-600 font-semibold font-mono text-[11px]">Active Study</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+        lucide.createIcons();
+      }
+
+      function filterSkills(cat) {
+        currentSkillCategory = cat;
+        const tabs = [
+          { id: 'skillTabAll', cat: 'All' },
+          { id: 'skillTabProg', cat: 'Programming' },
+          { id: 'skillTabWeb', cat: 'Web Development' },
+          { id: 'skillTabAI', cat: 'AI' },
+          { id: 'skillTabFound', cat: 'Foundations' }
+        ];
+
+        tabs.forEach(t => {
+          const el = document.getElementById(t.id);
+          if (t.cat === cat) {
+            el.className = 'skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-xs';
+          } else {
+            el.className = 'skill-tab px-3.5 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50';
+          }
+        });
+
+        renderSkills();
+      }
+
+      // 5. Roadmap Rendering
+      let currentRoadmapStep = 1;
+      function renderRoadmap() {
+        const rail = document.getElementById('roadmapStepRail');
+        rail.innerHTML = ROADMAP.map(s => {
+          const isSel = s.step === currentRoadmapStep;
+          return `
+            <button
+              onclick="selectRoadmapStep(${s.step})"
+              class="flex-1 px-3.5 py-3 rounded-2xl text-left transition-all ${
+                isSel ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-md' : 'hover:bg-slate-50 text-slate-700'
+              }"
+            >
+              <div class="flex items-center justify-between text-[11px] mb-1">
+                <span class="font-mono font-bold ${isSel ? 'text-white/80' : 'text-slate-400'}">0${s.step}</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider ${isSel ? 'text-cyan-200' : 'text-indigo-600'}">${s.status}</span>
+              </div>
+              <span class="block text-xs font-bold truncate">${s.stage}</span>
+            </button>
+          `;
+        }).join('');
+
+        const curr = ROADMAP.find(s => s.step === currentRoadmapStep) || ROADMAP[0];
+        const spot = document.getElementById('roadmapSpotlight');
+        spot.innerHTML = `
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8 space-y-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-200">STAGE 0${curr.step}</span>
+                <span class="text-slate-300">·</span>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Status: ${curr.status}</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">${curr.stage}</h3>
+              <p class="text-sm text-slate-600 leading-relaxed max-w-2xl">${curr.desc}</p>
+              <div class="pt-2">
+                <span class="text-xs font-bold text-slate-700 block mb-2 uppercase tracking-wide">Curriculum & Core Focus Areas:</span>
+                <div class="flex flex-wrap gap-2">
+                  ${curr.focus.map(f => `<span class="px-3 py-1 text-xs font-semibold text-indigo-900 bg-indigo-50/80 rounded-xl border border-indigo-200/80">${f}</span>`).join('')}
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-4 bg-gradient-to-br from-indigo-50/60 via-purple-50/40 to-white p-5 rounded-2xl border border-indigo-100 space-y-3">
+              <div class="flex items-center gap-2 text-indigo-900">
+                <i data-lucide="target" class="w-4 h-4 text-indigo-600"></i>
+                <h4 class="text-xs font-bold uppercase tracking-wider">Long-Term Goal</h4>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Step-by-step evolution toward an AI Engineer capable of designing, building, and deploying real-world solutions that create actual user value.
+              </p>
+              <div class="text-[11px] font-mono text-indigo-600 font-semibold pt-2 border-t border-indigo-100">Active Year: 2026 · College Fresher</div>
+            </div>
+          </div>
+        `;
+
+        const stack = document.getElementById('roadmapStack');
+        stack.innerHTML = ROADMAP.map((s, idx) => `
+          <div>
+            <div
+              onclick="selectRoadmapStep(${s.step})"
+              class="p-4 rounded-2xl border cursor-pointer transition-all flex items-center justify-between ${
+                s.step === currentRoadmapStep ? 'bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white border-indigo-500 shadow-md ring-1 ring-indigo-400/30' : 'bg-white hover:bg-slate-50 text-slate-800 border-slate-200 shadow-2xs'
+              }"
+            >
+              <div class="flex items-center gap-3">
+                <span class="w-2.5 h-2.5 rounded-full ${s.step === 1 ? 'bg-blue-500' : s.step === 2 ? 'bg-indigo-500' : s.step === 3 ? 'bg-teal-500' : s.step === 4 ? 'bg-purple-500' : s.step === 5 ? 'bg-pink-500' : 'bg-amber-500'}"></span>
+                <span class="text-xs font-mono font-bold opacity-70">0${s.step}</span>
+                <span class="text-xs sm:text-sm font-bold">${s.stage}</span>
+              </div>
+              <span class="text-[11px] font-semibold font-mono px-2 py-0.5 rounded-md ${s.step === currentRoadmapStep ? 'text-cyan-300 bg-white/10' : 'text-slate-500 bg-slate-100'}">${s.status}</span>
+            </div>
+            ${idx < ROADMAP.length - 1 ? '<div class="flex justify-center py-1.5"><i data-lucide="arrow-down" class="w-4 h-4 text-indigo-400"></i></div>' : ''}
+          </div>
+        `).join('');
+
+        lucide.createIcons();
+      }
+
+      function selectRoadmapStep(step) {
+        currentRoadmapStep = step;
+        renderRoadmap();
+      }
+
+      // 6. Project Modal Logic
+      let currentModalProject = null;
+      let atmCurrentBalance = 1000;
+      let atmLogs = ['Welcome to ATM Simulation.', 'Initial starting balance: $1,000.00'];
+
+      function openProjectModal(key) {
+        const p = PROJECTS[key];
+        if (!p) return;
+        currentModalProject = p;
+
+        document.getElementById('modalTitle').textContent = p.title;
+        document.getElementById('modalCodeSnippet').textContent = p.snippet;
+        document.getElementById('modalProblemStatement').textContent = p.problem;
+        document.getElementById('modalLogicExplanation').textContent = p.logic;
+        document.getElementById('modalConceptsList').innerHTML = p.concepts.map(c => `
+          <span class="px-3 py-1 text-xs font-semibold text-indigo-800 bg-indigo-50 rounded-xl border border-indigo-200">${c}</span>
+        `).join('');
+
+        // Build interactive simulator UI
+        const sim = document.getElementById('modalViewSimulator');
+        if (key === 'voter') {
+          sim.innerHTML = `
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-blue-50/60 to-white border border-blue-200/80 space-y-4">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <label class="text-xs font-bold text-slate-800">Enter Age to Test:</label>
+                <input id="simVoterAge" type="number" value="19" class="w-28 px-3 py-1.5 text-xs font-mono bg-white border border-slate-300 rounded-xl focus:border-indigo-600 focus:outline-hidden" />
+                <button onclick="runSimVoter()" class="px-4 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl">Evaluate Age</button>
+              </div>
+              <div id="simVoterResult" class="p-4 bg-slate-950 text-emerald-400 rounded-2xl font-mono text-xs border border-slate-800">
+                Eligible: At 19 years old, you meet the legal voting requirement.
+              </div>
+              <div class="text-[11px] text-slate-500 pt-2 border-t border-blue-100">
+                <strong>Rule Evaluated:</strong> <code class="font-mono bg-blue-100 text-blue-900 px-1 py-0.5 rounded">if age >= 18: eligible</code> else <code class="font-mono bg-blue-100 text-blue-900 px-1 py-0.5 rounded">18 - age years left</code>.
+              </div>
+            </div>
+          `;
+        } else if (key === 'calc') {
+          sim.innerHTML = `
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-indigo-50/60 to-white border border-indigo-200/80 space-y-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <input id="simCalcN1" type="number" value="12" class="w-24 px-3 py-1.5 text-xs font-mono bg-white border border-slate-300 rounded-xl" />
+                <select id="simCalcOp" class="px-3 py-1.5 text-xs font-mono bg-white border border-slate-300 rounded-xl">
+                  <option value="+">+</option><option value="-">-</option><option value="*">×</option><option value="/">÷</option>
+                </select>
+                <input id="simCalcN2" type="number" value="4" class="w-24 px-3 py-1.5 text-xs font-mono bg-white border border-slate-300 rounded-xl" />
+                <button onclick="runSimCalc()" class="px-4 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl">Compute</button>
+              </div>
+              <div id="simCalcResult" class="p-4 bg-slate-950 text-indigo-300 rounded-2xl font-mono text-xs border border-slate-800">
+                Result: 12 + 4 = 16.00
+              </div>
+              <div class="text-[11px] text-slate-500 pt-2 border-t border-indigo-100">
+                <strong>Exception Handled:</strong> ZeroDivisionError prevented when divisor equals zero.
+              </div>
+            </div>
+          `;
+        } else if (key === 'atm') {
+          sim.innerHTML = `
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-50/60 to-white border border-emerald-200/80 space-y-4">
+              <div class="flex items-center justify-between text-xs">
+                <span class="text-slate-600 font-medium">Virtual Bank Account Balance:</span>
+                <span id="simAtmBal" class="font-mono font-bold text-emerald-700 text-sm">$1,000.00</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold text-slate-600">$</span>
+                <input id="simAtmAmount" type="number" value="150" class="w-28 px-3 py-1.5 text-xs font-mono bg-white border border-slate-300 rounded-xl" />
+                <button onclick="runSimAtmDeposit()" class="px-3.5 py-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-300 rounded-xl">Deposit Funds</button>
+                <button onclick="runSimAtmWithdraw()" class="px-3.5 py-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-300 rounded-xl">Withdraw Funds</button>
+                <button onclick="resetSimAtm()" class="p-1.5 text-slate-400 hover:text-slate-700 ml-auto" title="Reset"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+              </div>
+              <div id="simAtmLogCont" class="bg-slate-950 text-emerald-300 p-3.5 rounded-2xl font-mono text-xs max-h-32 overflow-y-auto space-y-1 border border-slate-800">
+                <div>Welcome to ATM Simulation.</div><div>Initial starting balance: $1,000.00</div>
+              </div>
+            </div>
+          `;
+        } else if (key === 'grade') {
+          sim.innerHTML = `
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-50/60 to-white border border-amber-200/80 space-y-4">
+              <div>
+                <label class="text-xs font-bold text-slate-800 block mb-1">Enter Subject Marks (comma-separated, 0 to 100):</label>
+                <div class="flex items-center gap-2">
+                  <input id="simGradeInput" type="text" value="85, 92, 78, 88" class="flex-1 px-3 py-1.5 text-xs font-mono bg-white border border-slate-300 rounded-xl" />
+                  <button onclick="runSimGrade()" class="px-4 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-amber-600 to-orange-600 rounded-xl shrink-0">Compute Grade</button>
+                </div>
+              </div>
+              <div id="simGradeResult" class="p-4 bg-slate-950 text-amber-300 rounded-2xl font-mono text-xs border border-slate-800 flex items-center justify-between">
+                <span>Average: 85.75%</span><span class="font-bold text-white">Grade: B (Very Good)</span>
+              </div>
+            </div>
+          `;
+        }
+
+        switchModalTab('simulator');
+        document.getElementById('projectModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        lucide.createIcons();
+      }
+
+      function closeProjectModal() {
+        document.getElementById('projectModal').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function switchModalTab(tab) {
+        const vSim = document.getElementById('modalViewSimulator');
+        const vCode = document.getElementById('modalViewCode');
+        const vLogic = document.getElementById('modalViewLogic');
+        const tSim = document.getElementById('modalTabSim');
+        const tCode = document.getElementById('modalTabCode');
+        const tLogic = document.getElementById('modalTabLogic');
+
+        [vSim, vCode, vLogic].forEach(v => v.classList.add('hidden'));
+        [tSim, tCode, tLogic].forEach(t => t.className = 'px-3.5 py-1.5 text-xs font-bold rounded-xl text-slate-600 hover:text-slate-900');
+
+        if (tab === 'simulator') {
+          vSim.classList.remove('hidden');
+          tSim.className = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xs';
+        } else if (tab === 'code') {
+          vCode.classList.remove('hidden');
+          tCode.className = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xs';
+        } else if (tab === 'logic') {
+          vLogic.classList.remove('hidden');
+          tLogic.className = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xs';
+        }
+      }
+
+      function copyModalCode() {
+        if (!currentModalProject) return;
+        navigator.clipboard.writeText(currentModalProject.snippet);
+        const t = document.getElementById('btnCopyCodeText');
+        t.textContent = 'Copied to Clipboard!';
+        setTimeout(() => { t.textContent = 'Copy Full Code'; }, 2000);
+      }
+
+      // Simulator Executions
+      function runSimVoter() {
+        const age = parseInt(document.getElementById('simVoterAge').value, 10);
+        const res = document.getElementById('simVoterResult');
+        if (isNaN(age)) res.textContent = 'Error: Please enter a valid numerical whole number.';
+        else if (age < 0) res.textContent = 'Error: Age cannot be negative.';
+        else if (age >= 18) res.textContent = `Eligible: At ${age} years old, you meet the legal voting requirement.`;
+        else res.textContent = `Not Eligible: You will be eligible to vote in ${18 - age} year(s).`;
+      }
+
+      function runSimCalc() {
+        const n1 = parseFloat(document.getElementById('simCalcN1').value);
+        const op = document.getElementById('simCalcOp').value;
+        const n2 = parseFloat(document.getElementById('simCalcN2').value);
+        const res = document.getElementById('simCalcResult');
+        if (isNaN(n1) || isNaN(n2)) { res.textContent = 'Error: Invalid numerical values.'; return; }
+        if (op === '+') res.textContent = `${n1} + ${n2} = ${(n1 + n2).toFixed(2)}`;
+        else if (op === '-') res.textContent = `${n1} - ${n2} = ${(n1 - n2).toFixed(2)}`;
+        else if (op === '*') res.textContent = `${n1} × ${n2} = ${(n1 * n2).toFixed(2)}`;
+        else if (op === '/') {
+          if (n2 === 0) res.textContent = 'Error: Division by zero is undefined.';
+          else res.textContent = `${n1} ÷ ${n2} = ${(n1 / n2).toFixed(2)}`;
+        }
+      }
+
+      function runSimAtmDeposit() {
+        const amt = parseFloat(document.getElementById('simAtmAmount').value);
+        if (isNaN(amt) || amt <= 0) return;
+        atmCurrentBalance += amt;
+        atmLogs.push(`Deposited: $${amt.toFixed(2)} · New Balance: $${atmCurrentBalance.toFixed(2)}`);
+        updateAtmSimUI();
+      }
+
+      function runSimAtmWithdraw() {
+        const amt = parseFloat(document.getElementById('simAtmAmount').value);
+        if (isNaN(amt) || amt <= 0) return;
+        if (amt > atmCurrentBalance) {
+          atmLogs.push(`Declined: Insufficient funds. Available: $${atmCurrentBalance.toFixed(2)}`);
+        } else {
+          atmCurrentBalance -= amt;
+          atmLogs.push(`Withdrew: $${amt.toFixed(2)} · Remaining: $${atmCurrentBalance.toFixed(2)}`);
+        }
+        updateAtmSimUI();
+      }
+
+      function resetSimAtm() {
+        atmCurrentBalance = 1000;
+        atmLogs = ['Reset ATM session.', 'Current balance: $1,000.00'];
+        updateAtmSimUI();
+      }
+
+      function updateAtmSimUI() {
+        document.getElementById('simAtmBal').textContent = `$${atmCurrentBalance.toFixed(2)}`;
+        document.getElementById('simAtmLogCont').innerHTML = atmLogs.map(l => `<div>${l}</div>`).join('');
+      }
+
+      function runSimGrade() {
+        const raw = document.getElementById('simGradeInput').value;
+        const parts = raw.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+        const res = document.getElementById('simGradeResult');
+        if (parts.length === 0) { res.textContent = 'Please enter comma-separated numbers.'; return; }
+        const avg = parts.reduce((a, b) => a + b, 0) / parts.length;
+        let grade = 'F';
+        let detail = 'Needs Improvement';
+        if (avg >= 90) { grade = 'A'; detail = 'Outstanding'; }
+        else if (avg >= 80) { grade = 'B'; detail = 'Very Good'; }
+        else if (avg >= 70) { grade = 'C'; detail = 'Good'; }
+        else if (avg >= 60) { grade = 'D'; detail = 'Pass'; }
+        res.innerHTML = `<span>Average: ${avg.toFixed(2)}%</span><span class="font-bold text-white">Grade: ${grade} (${detail})</span>`;
+      }
+
+      // 7. Command Palette Logic
+      const COMMAND_ITEMS = [
+        { label: 'Home / Hero Introduction', href: '#home', cat: 'Navigation', icon: 'compass' },
+        { label: 'About Me & Education', href: '#about', cat: 'Navigation', icon: 'book-open' },
+        { label: 'Skills & Tech Stack', href: '#skills', cat: 'Navigation', icon: 'code-2' },
+        { label: 'Featured Python Projects', href: '#projects', cat: 'Navigation', icon: 'folder-git-2' },
+        { label: 'Hackathons: Learning Through Building', href: '#experience', cat: 'Navigation', icon: 'zap' },
+        { label: 'Contact & Social Profiles', href: '#contact', cat: 'Navigation', icon: 'mail' },
+        { label: 'Project: Voter Eligibility Checker', href: '#projects', cat: 'Project', icon: 'vote', modalKey: 'voter' },
+        { label: 'Project: Calculator', href: '#projects', cat: 'Project', icon: 'calculator', modalKey: 'calc' },
+        { label: 'Project: ATM Management System', href: '#projects', cat: 'Project', icon: 'landmark', modalKey: 'atm' },
+        { label: 'Project: Student Grade Calculator', href: '#projects', cat: 'Project', icon: 'graduation-cap', modalKey: 'grade' }
+      ];
+
+      function openCommandPalette() {
+        document.getElementById('commandPalette').classList.remove('hidden');
+        document.getElementById('commandSearchInput').value = '';
+        filterCommandPalette('');
+        document.getElementById('commandSearchInput').focus();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeCommandPalette() {
+        document.getElementById('commandPalette').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function filterCommandPalette(q) {
+        const query = q.toLowerCase();
+        const list = document.getElementById('commandList');
+        const filtered = COMMAND_ITEMS.filter(it => it.label.toLowerCase().includes(query) || it.cat.toLowerCase().includes(query));
+
+        if (filtered.length === 0) {
+          list.innerHTML = `<div class="p-6 text-center text-xs text-slate-500">No matching sections found for "${q}".</div>`;
+          return;
+        }
+
+        list.innerHTML = filtered.map(it => `
+          <button
+            type="button"
+            onclick="jumpToCommand('${it.href}', '${it.modalKey || ''}')"
+            class="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-indigo-50/70 transition-colors text-left group"
+          >
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
+                <i data-lucide="${it.icon}" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">${it.label}</span>
+                <span class="block text-[10px] text-slate-400">${it.cat}</span>
+              </div>
+            </div>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-600"></i>
+          </button>
+        `).join('');
+        lucide.createIcons();
+      }
+
+      function jumpToCommand(href, modalKey) {
+        closeCommandPalette();
+        if (modalKey) {
+          openProjectModal(modalKey);
+          return;
+        }
+        const el = document.querySelector(href);
+        if (el) {
+          const topOffset = 80;
+          const pos = el.getBoundingClientRect().top + window.pageYOffset - topOffset;
+          window.scrollTo({ top: pos, behavior: 'smooth' });
+        }
+      }
+
+      // 8. Contact & Copy Utilities
+      function copyEmail() {
+        navigator.clipboard.writeText('leelakrishnalk912@gmail.com');
+        const btn = document.getElementById('btnCopyEmail');
+        btn.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>';
+        lucide.createIcons();
+        setTimeout(() => {
+          btn.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
+          lucide.createIcons();
+        }, 2000);
+      }
+
+      function handleSendNote(e) {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const subj = document.getElementById('contact-subject').value;
+        const msg = document.getElementById('contact-message').value;
+
+        const mailto = `mailto:leelakrishnalk912@gmail.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(`Hi Leela Krishna,\n\n${msg}\n\nBest regards,\n${name}`)}`;
+        window.location.href = mailto;
+      }
+
+      function toggleMobileMenu() {
+        const m = document.getElementById('mobileMenu');
+        m.classList.toggle('hidden');
+      }
+
+      // Keyboard Listeners
+      window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          const p = document.getElementById('commandPalette');
+          if (p.classList.contains('hidden')) openCommandPalette();
+          else closeCommandPalette();
+        } else if (e.key === 'Escape') {
+          closeCommandPalette();
+          closeProjectModal();
+        }
+      });
+
+      // Initialize on DOM load
+      window.addEventListener('DOMContentLoaded', () => {
+        renderSkills();
+        renderRoadmap();
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>
